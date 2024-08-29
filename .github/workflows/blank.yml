@@ -1,0 +1,32 @@
+name: Branch Checkout and System Info
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  JobLinux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Display README.md content | LINUX
+        run: |
+          cat README.md
+          uname -a
+
+  JobWindows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print Windows version | WINDOWS
+        run: |
+          echo Windows Version:
+          Get-CimInstance Win32_OperatingSystem
