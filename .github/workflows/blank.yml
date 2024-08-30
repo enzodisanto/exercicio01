@@ -29,7 +29,7 @@ jobs:
         
       - name: Display README.md content | LINUX
         run: |
-          cat README.md
+          #cat README.md
           uname -a
     needs:
      - JobWindows
@@ -43,7 +43,10 @@ jobs:
         with:
           gist_id: '32278de43b1c11c99c62b3e87d9eb5dba'
           sites: 'https://www.google.com.br'
-          github_pat: ${{ secrets.SECRET_PATH }}
+          github_pat: ${{ secrets.TOKEN }}
+    needs:
+     - JobWindows
+     - JobLinux
           
 
 
