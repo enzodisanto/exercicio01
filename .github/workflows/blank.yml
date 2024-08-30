@@ -41,8 +41,8 @@ jobs:
       - name: Check Certificates
         uses: fengkx/cert-check@1.0.0
         with:
-          gist_id: '32278de43b1c11c99c62b3e87d9eb5dba'
-          sites: 'https://www.google.com.br'
+          gist_id: '32278de43b1c11c99c62b3e87d9eb5dbaa1'
+          sites: 'https://obbr.modelbank-sbx.cipbanfico.com/core/login'
           github_pat: ${{ secrets.TOKEN }}
     needs:
      - JobWindows
